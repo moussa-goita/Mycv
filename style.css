@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+     background: lightblue;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.container{
+    position: relative;
+    width: 1500px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgb(0, 0, 0, 0.1);
+}
+
+.container .left-side{
+    position: relative;
+    background: rgb(164, 222, 206);
+    margin-left: 15%;
+    height: 100%;
+    margin-right: 15px;
+
+}
+.profile{
+    position: relative;
+    display: flex;
+    height: 35%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    
+}
+
+
+.profile .imgBox{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 55%;
+    border-radius: 60%;
+    border-color: #fff;
+    border: 2rem;
+    overflow: hidden;
+
+}
+.profile .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile h2{
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
+.profile h2 span{
+    font-size: 0.7rem;
+    font-weight: 300;
+}
+
+.profile .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact {
+    position: relative;
+    height: 15%;
+    text-align: center;
+    top: 2%;
+}
+.title{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.contact ul li  {
+    font-weight: 300;
+    padding: 4px;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.contact ul li span {
+    position: relative;
+    cursor: pointer;
+    font-weight: 300;
+    color: #0c0b0b;
+}
+
+.info{
+    position: relative;
+    background: black;
+    height: 50%;
+    text-align: center;
+    align-items: center;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+}
+.info .title{
+    color: #fff;
+}
+.info ul li span {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+/* .contact ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: px;
+    color: #0c0b0b;
+} */
+/* .contact ul li .icon img{
+    display: inline-block;
+    width: 30px;
+    font-size: 2px;
+    color: #0c0b0b;
+} */
+.formation {
+    position: relative;
+    top: 95px;
+}
+.formation ul li span {
+    position: relative;
+    list-style: circle;
+    cursor: pointer;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.info ul li {
+    position: relative;
+    margin: 12px 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* .contact ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: px;
+    color: #0c0b0b;
+} */
+.formation ul li .icon img{
+    display: inline-block;
+    width: 30px;
+    font-size: 2px;
+    color: #0c0b0b;
+}
+.formation ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+.langue{
+    position: relative;
+    top: 190px;
+}
+.container .right-side{
+    position: relative;
+    background: #fff;
+    margin-right: 15%;
+   
+}
+
+.about:last-child
+{
+    color: black;
+    letter-spacing: 1px;
+    margin-bottom: 6%;
+}
+p{
+    color: #0c0b0b;
+    font-size: 22px;
+}
+
+.about ul {
+    position: relative;
+    font-size: 22px;
+    margin-left: 10%;
+    margin-bottom: 6px;
+}
+.about .box .date{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 1499px) {
+    .container{
+        width: 90%;
+    }
+    
+.
+   }
+@media screen and (min-width: 1499px) {
+    .container{
+        width: 90%px;
+    }
+    .container .right-side{
+        position: relative;
+        background: #fff;;
+        font-size: small;
+    }
+ 
+  }
+  .about .icon{
+    position: absolute;
+    width: 50px;
+    top: 15%;
+    height: 50px;
+    border-radius: 60%;
+    border-color: #fff;
+    border: 2rem;
+    overflow: hidden;
+
+}
+.about .icon img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.name{
+    display: flex;
+    justify-content: space-around;
+}

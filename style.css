@@ -1,10 +1,15 @@
+/* Réinitialisation des styles */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter';
 }
-
+/* Déclaration de la couleur dominante */
+:root {
+    --couleur-dominante: rgb(164, 222, 206); /* Vert vif */
+}
+/* Styles pour le corps de la page */
 body{
      background: lightblue;
      display: flex;
@@ -12,6 +17,7 @@ body{
      align-items: center;
      min-height: 100vh;
 }
+/* Styles pour le conteneur principal */
 .container{
     position: relative;
     width: 800px;
@@ -24,19 +30,19 @@ body{
 }
 
   
-
+/* Styles pour la section de gauche */
 .container .left-side{
     position: relative;
-    background: rgb(164, 222, 206);
+    background: var(--couleur-dominante);
     margin-left: 15%;
-    height: 100%;
+    /* height: 100%; */
     margin-right: 15px;
-
 }
+/* Styles pour la section de profil */
 .profile{
-    position: relative;
+    /* position: relative; */
     display: flex;
-    height: 35%;
+    height: 300px;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -50,7 +56,7 @@ body{
     position: absolute;
     width: 150px;
     height: 150px;
-    top: 55%;
+    top: 100px;
     border-radius: 60%;
     border-color: #fff;
     border: 2rem;
@@ -79,22 +85,12 @@ body{
     font-weight: 300;
 }
 .box h3 {
-    font-size: 15px;
+    font-size: 18px;
 }
-.profile .imgBox img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* Styles pour la section de contact */
 .contact {
-    position: relative;
-    height: 15%;
+    margin-top: 25%;
     text-align: center;
-    top: 2%;
 }
 .title{
     color: black;
@@ -113,6 +109,14 @@ body{
     overflow: hidden;
  
 }
+.contact_child{
+    display: flex;
+    justify-content: center;
+}
+.contact_child h3{
+    margin-top: 3.5px;
+    margin-left: 5px;
+}
 .contact ul li  {
     font-weight: 300;
     padding: 4px;
@@ -127,11 +131,15 @@ body{
     font-weight: 300;
     color: #0c0b0b;
 }
-
+/* Styles pour la section d'informations */
 .info{
-    position: relative;
+    position: absolute;
     background: black;
-    height: 50%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
     text-align: center;
     align-items: center;
     border-top-left-radius: 90px;
@@ -149,18 +157,7 @@ body{
     text-align: center;
     justify-content: center;
 }
-/* .contact ul li .icon{
-    display: inline-block;
-    width: 30px;
-    font-size: px;
-    color: #0c0b0b;
-} */
-/* .contact ul li .icon img{
-    display: inline-block;
-    width: 30px;
-    font-size: 2px;
-    color: #0c0b0b;
-} */
+/* Styles pour la section de formation */
 .formation {
     position: relative;
     top: 95px;
@@ -175,28 +172,12 @@ body{
     justify-content: center;
 }
 
-
-
 .info ul li {
     position: relative;
     margin: 12px 20px;
-    font-style: none;
     cursor: pointer;
     color: #fff;
     font-size: 14px;
-}
-
-/* .contact ul li .icon{
-    display: inline-block;
-    width: 30px;
-    font-size: px;
-    color: #0c0b0b;
-} */
-.formation ul li .icon img{
-    display: inline-block;
-    width: 30px;
-    font-size: 2px;
-    color: #0c0b0b;
 }
 .formation ul li span{
     color: #fff;
@@ -210,7 +191,24 @@ body{
     position: relative;
     background: #fff;
     margin-right: 15%;
+    margin-top: 4%;
    
+}
+.iconInfo1, .iconInfo2{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+
+}
+.iconInfo1{
+    border: 2px solid white;
+    background-color: black;
+}
+.iconInfo2{
+    border: 2px solid black;
+    background-color: white;
 }
 
 .about:last-child
@@ -221,91 +219,104 @@ body{
 }
 p{
     color: #0c0b0b;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .about ul {
     position: relative;
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 10%;
     margin-bottom: 6px;
 }
 .about .box .date{
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 18px;
 }
 
-
+/* Styles pour les médias query */
 
 @media screen and (max-width: 650px) {
     
-    .container{
-        grid-template-columns: repeat(1, 1fr);
+        .container{
+            grid-template-columns: repeat(1, 1fr);
+            max-height: 100%;
+            position: relative;
        }
        .container .left-side{
-        margin: 0;
-        height: 150vh;
+            margin: 0;
+            /* height: 10vh; */
        }
+       .container .right-side{
+        margin-right: 0%;
+       }
+       
        .profile{
         border-bottom-left-radius: 250px;
         border-bottom-right-radius: 250px;
+        height: 355px;
        }
        .info{
         border-top-left-radius: 250px;
         border-top-right-radius: 250px;
+        height: 350px;
+       }
+       .formation{
+        top: 55px;
+       }
+       .langue{
+        top: 65px;
        }
        .profile h2{
-        font-size: 33px;
-       }
-       .profile h2 span{
-        font-size: 20px;
-       }
-       .title{
-        font-size: 33px;
-       }
-       .contact ul li span{
-        font-size: 22px;
-       }
-       .info ul li{
         font-size: 25px;
        }
-       .about .title2{
-        font-size: 34px;
+       .profile h2 span{
+        font-size: 18px;
        }
-       .name .title2 img{
-        border-radius: 60%;
-        width: 45px;
-        height: 45px;
-        margin-left: -50px;
+       .title{
+        font-size: 25px;
+       }
+       .contact{
+        margin-top: 10%;
+        height: 550px;
+        font-size: 22px;
+       }
+       .contact_child h3{
+        margin-top: 0;
+        font-size: 25px;
+       }
+       .contact ul li span{
+        font-size: 24px;
+       }
+       .info ul li{
+        font-size: 15px;
+       }
+       .about .title2{
+        font-size: 30px;
        }
        .title2{
         display: flex;
         justify-content: space-between;
         font-size: 22px;
         margin-bottom: 10px;
+        align-items: center;
+      }
+      .name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
   }
   .title2{
     display: flex;
     justify-content: space-between;
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px;
   }
-  .i
-  .title2 img{
-    position: absolute;
-    background-color: #0c0b0b;
-    width: 25px;
-    height: 25px;
-    margin-left: -30px;
-    border-radius: 6%;
-    border: 2rem;
-    font-size: 12px;
-    overflow: hidden;
-}
-
+  
+/* Styles pour la boîte contenant les titres */
 .name{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    align-items:center;
+    margin-bottom: 6px;
 }

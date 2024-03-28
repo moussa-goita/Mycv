@@ -7,7 +7,7 @@
 }
 /* Déclaration de la couleur dominante */
 :root {
-    --couleur-dominante: rgb(164, 222, 206); /* Vert vif */
+    --couleur-dominante: #C5C4C1; /* Vert vif */
 }
 /* Styles pour le corps de la page */
 body{

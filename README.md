@@ -1,5 +1,5 @@
 Ce projet est un CV qui présente les informations de Balla Coulibaly
-# Mon CV
+# ProjetCV
 
 Ce fichier HTML contient les détails de mon CV, 
 ## Contenu du fichier

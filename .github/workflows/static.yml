@@ -1,4 +1,4 @@
-
+name: projetCV
 on:
   push:
     branches: [ "dev" ]
